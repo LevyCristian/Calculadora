@@ -497,9 +497,10 @@ public class Frame extends javax.swing.JFrame {
         	else if(e.getSource() == Clear){ 
         		Display.setText("0");
         		DisplayHistorico.setText("");
+        		firstClick = true;
+        		firstOperation = true;
         		firstPoint = true;
-    			firstClick = true;
-    			firstOperation = true;
+        		typeFloat = false;
         		
         	}
         	
@@ -586,7 +587,6 @@ public class Frame extends javax.swing.JFrame {
         			}
         			firstClick = true;
         			firstOperation = false;
-        			System.out.println("aaaa");
         		}
         		
         		else {
@@ -649,6 +649,7 @@ public class Frame extends javax.swing.JFrame {
         		}
         	}
         	else if(e.getSource() == Divide){
+        		
         		
         		if(firstPoint && !typeFloat){
         			if(!firstOperation){
@@ -722,6 +723,47 @@ public class Frame extends javax.swing.JFrame {
         			}
         		}
         	}
+        	
+        	else if(e.getSource() == Equal){
+        		
+        		
+        		if(firstClick){
+        				
+        			}
+        		
+        		else if(firstPoint && !typeFloat){
+            		if(!firstOperation){
+                		Display.setText(this.convertToStringInt(controller.getValueI(this.convertToInt(Display.getText()))));
+                		controller.setValue1int(this.convertToInt(Display.getText()));
+                		this.updateScreamH("", "");
+            		}
+            		else{
+            				
+                				
+            		}
+            		firstClick = true;
+            		firstOperation = false;
+            	}
+            		
+            	else {
+            			
+            		if(!firstOperation){
+            			Display.setText(this.convertToString(controller.getValuef(this.convertToFloat(Display.getText()))));
+            			controller.setValue1f(this.convertToFloat(Display.getText()));
+           				this.updateScreamH("", "");
+           				firstPoint = true;
+               			firstClick = true;
+           			}
+           			else{
+           				
+           				firstPoint = true;
+               			firstClick = true;
+               			firstOperation = false;	
+           			}
+           		}
+       		}
+       	
+        
         }//
 
 		public float convertToFloat(String str) {

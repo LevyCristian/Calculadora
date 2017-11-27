@@ -28,16 +28,20 @@ public class Controller {
 		this.value2int = value2;
 		
 		if(this.operator == 1){
-			return (int)(this.value1int + this.value2int);
+			Soma<Integer> s = new Soma<Integer>(this.value1int, this.value2int, Integer.class);
+			return (int)(s.getResultado());
 		}
 		else if (this.operator == 2){
-			return (int)(this.value1int - this.value2int);
+			Subtracao<Integer> s = new Subtracao<Integer>(this.value1int, this.value2int, Integer.class);
+			return (int)(s.getResultado());
 		}
 		else if (this.operator == 3){
-			return (int)(this.value1int * this.value2int);
+			Multiplicacao<Integer> s = new Multiplicacao<Integer>(this.value1int, this.value2int, Integer.class);
+			return (int)(s.getResultado());
 		}
 		else{
-			return (int)(this.value1int / this.value2int);
+			Divisao<Integer> s = new Divisao<Integer>(this.value1int, this.value2int, Integer.class);
+			return (int)(s.getResultado());
 		}
 		
 	}
@@ -60,18 +64,22 @@ public class Controller {
 
 	public float getValuef(float value2){
 		this.value2f = value2;
-		System.out.println(this.operator);	
+		
 		if(this.operator == 1){
-			return (float) (this.value1f + this.value2f);
+			Soma<Float> s = new Soma<Float>(this.value1f,this.value2f , float.class);
+			return (float)(s.getResultado());
 		}
-		else if(this.operator == 2){
-			return (float) (this.value1f - this.value2f);
+		else if (this.operator == 2){
+			Subtracao<Float> s = new Subtracao<Float>(this.value1f,this.value2f , float.class);
+			return (float)(s.getResultado());
 		}
-		else if(this.operator == 3){
-			return (float) (this.value1f * this.value2f);
+		else if (this.operator == 3){
+			Multiplicacao<Float> s = new Multiplicacao<Float>(this.value1f,this.value2f , float.class);
+			return (float)(s.getResultado());
 		}
 		else{
-			return (float) (this.value1f / this.value2f);
+			Divisao<Float> s = new Divisao<Float>(this.value1f,this.value2f , float.class);
+			return (float)(s.getResultado());
 		}
 			
 	}
