@@ -737,12 +737,8 @@ public class Frame extends javax.swing.JFrame {
                 		controller.setValue1int(this.convertToInt(Display.getText()));
                 		this.updateScreamH("", "");
             		}
-            		else{
-            				
-                				
-            		}
             		firstClick = true;
-            		firstOperation = false;
+            		firstOperation = true;
             	}
             		
             	else {
@@ -753,12 +749,13 @@ public class Frame extends javax.swing.JFrame {
            				this.updateScreamH("", "");
            				firstPoint = true;
                			firstClick = true;
-           			}
+               			firstOperation = true;	
+            		}
            			else{
            				
            				firstPoint = true;
                			firstClick = true;
-               			firstOperation = false;	
+               			firstOperation = true;	
            			}
            		}
        		}
