@@ -526,10 +526,6 @@ public class Frame extends javax.swing.JFrame {
         		}
         	}
         	
-        	else if(e.getSource() == Porcent){ 
-        		
-        	}
-        	
         	else if(e.getSource() == Sum){
         		
         		
@@ -693,23 +689,6 @@ public class Frame extends javax.swing.JFrame {
         	}
         	else if(e.getSource() == Porcent){
         		
-        		if(firstPoint && !typeFloat){
-        			if(!firstOperation){
-            			Display.setText(this.convertToStringInt(controller.getValueI(this.convertToInt(Display.getText()))));
-            			controller.setValue1int(this.convertToInt(Display.getText()));
-            			this.updateScreamH("", "");
-        			}
-        			else{
-        				controller.startI(this.convertToInt(Display.getText()), 1);
-            			this.updateScreamH(Display.getText(), "+");
-            				
-        			}
-        			firstClick = true;
-        			firstOperation = false;
-        		}
-        		
-        		else {
-        			
         			if(!firstOperation){
         				Display.setText(this.convertToString(controller.getValuef(this.convertToFloat(Display.getText()))));
         				controller.setValue1f(this.convertToFloat(Display.getText()));
@@ -724,7 +703,7 @@ public class Frame extends javax.swing.JFrame {
             			firstClick = true;
             			firstOperation = false;	
         			}
-        		}
+        		
         	}
         	
         	else if(e.getSource() == Equal){
