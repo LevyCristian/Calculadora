@@ -532,7 +532,8 @@ public class Frame extends javax.swing.JFrame {
         	
         	else if(e.getSource() == Sum){
         		
-        		if(firstPoint && !typeFloat){
+        		
+        	 if(firstPoint && !typeFloat){
         			if(!firstOperation){
        
         				Display.setText(this.convertToStringInt(controller.getValueI(this.convertToInt(Display.getText()))));
@@ -572,7 +573,8 @@ public class Frame extends javax.swing.JFrame {
         	
         	else if(e.getSource() == Sub){
         		
-        		if(firstPoint && !typeFloat){
+        		
+        	 if(firstPoint && !typeFloat){
         			if(!firstOperation){
         				
         				Display.setText(this.convertToStringInt(controller.getValueI(this.convertToInt(Display.getText()))));
@@ -611,7 +613,8 @@ public class Frame extends javax.swing.JFrame {
         	}
         	else if(e.getSource() == Mult){
         		
-        		if(firstPoint && !typeFloat){
+        		
+        	 if(firstPoint && !typeFloat){
         			if(!firstOperation){
         				
             			Display.setText(this.convertToStringInt(controller.getValueI(this.convertToInt(Display.getText()))));
@@ -651,7 +654,7 @@ public class Frame extends javax.swing.JFrame {
         	else if(e.getSource() == Divide){
         		
         		
-        		if(firstPoint && !typeFloat){
+        	if(firstPoint && !typeFloat){
         			if(!firstOperation){
         				
             			Display.setText(this.convertToStringInt(controller.getValueI(this.convertToInt(Display.getText()))));
