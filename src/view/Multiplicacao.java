@@ -14,7 +14,9 @@ public class Multiplicacao<T extends Number> extends Operacao<Number>{
 
    public Number getResultado(){
 	   if(this.getMyType().equals(float.class)){
-		  return getValor1().floatValue() * getValor2().floatValue();
+		   float number1 = getValor1().floatValue()
+		   float number2 = getValor2().floatValue();
+		   return  number1 * number2
 	   }else{
 		   return getValor1().intValue() * getValor2().intValue();
 	   }
